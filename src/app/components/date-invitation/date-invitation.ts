@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './date-invitation.html',
   styleUrl: './date-invitation.scss',
 })
-export class DateInvitation {
-
-}
+export class DateInvitation {}
