@@ -1,28 +1,6 @@
-<!-- <header class="header">
-  <img
-    src="/assets/header/header-main-image.webp"
-    alt="Wedding background"
-    width="1440"
-    height="900"
-    priority
-    class="bg"
-  />
-
-  <div class="content">
-    <img
-      src="/assets/header/header-secondary-image.webp"
-      alt="Center"
-      class="center"
-    />
-  </div>
-</header> -->
-
 <header class="header">
   <picture>
-    <source
-      srcset="/assets/header/header-main-image-mobile.webp"
-      media="(max-width: 768px)"
-    />
+    <source srcset="/assets/header/header-main-image-mobile.webp" media="(max-width: 768px)" />
 
     <img
       src="/assets/header/header-main-image.webp"
@@ -34,17 +12,12 @@
   </picture>
 
   <div class="content">
-    <picture>
-      <source
-        srcset="/assets/header/header-secondary-image-mobile.webp"
-        media="(max-width: 768px)"
-      />
+    <div class="text-wrapper">
+      <span class="first-text"> Сергей </span>
 
-      <img
-        src="/assets/header/header-secondary-image.webp"
-        alt="Center"
-        class="center"
-      />
-    </picture>
+      <span class="secont-text"> & </span>
+
+      <span class="third-text"> Алёна </span>
+    </div>
   </div>
 </header>

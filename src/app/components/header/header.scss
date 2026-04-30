@@ -20,12 +20,67 @@
     align-items: center;
     justify-content: center;
 
-    padding: 20px;
+    .text-wrapper {
+      width: 300px;
+      height: 206px;
+      display: flex;
+      flex-direction: column;
 
-    .center {
-      max-width: 600px;
-      width: 100%;
-      height: auto;
+      .first-text {
+        align-self: flex-start;
+
+        font-family: 'Great Vibes';
+        font-weight: 400;
+        font-size: 75px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #ffffff;
+      }
+
+      .secont-text {
+        align-self: center;
+
+        font-family: 'Great Vibes';
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #ffffff;
+      }
+
+      .third-text {
+        align-self: flex-end;
+
+        font-family: 'Great Vibes';
+        font-weight: 400;
+        font-size: 75px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    .content {
+      .text-wrapper {
+        width: 206px;
+        gap: 10px;
+
+        .text-wrapper {
+          font-size: 40px;
+        }
+
+        .secont-text {
+          font-size: 20px;
+        }
+
+        .third-wrapper {
+          font-size: 40px;
+        }
+      }
     }
   }
 }
