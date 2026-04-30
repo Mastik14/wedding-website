@@ -1,7 +1,7 @@
 :host {
   .date-invitation-wrapper {
-    height: 100vh;
     padding: 0 140px;
+    margin-bottom: 160px;
 
     .text-wrapper {
       display: flex;
@@ -54,6 +54,7 @@
   :host {
     .date-invitation-wrapper {
       padding: 0 19px;
+      margin-bottom: 80px;
 
       .text-wrapper {
         .main-text {
