@@ -1,7 +1,6 @@
 .header {
   position: relative;
   width: 100%;
-  height: 100vh;
   overflow: hidden;
 
   .bg {
@@ -9,6 +8,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+
     display: block;
   }
 
@@ -19,6 +19,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    text-align: center;
 
     .text-wrapper {
       width: 300px;
