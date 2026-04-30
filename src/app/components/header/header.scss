@@ -1,4 +1,7 @@
-.header {
+:host {
+  .header {
+  display: block;
+  margin-bottom: 120px;
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -53,24 +56,29 @@
     }
   }
 }
+}
 
 @media (max-width: 768px) {
-  .header {
-    .content {
-      .text-wrapper {
-        width: 206px;
-        gap: 10px;
+  :host {
+    .header {
+      margin-bottom: 30px;
 
+      .content {
         .text-wrapper {
-          font-size: 40px;
-        }
+          width: 206px;
+          gap: 10px;
 
-        .secont-text {
-          font-size: 20px;
-        }
+          .text-wrapper {
+            font-size: 40px;
+          }
 
-        .third-wrapper {
-          font-size: 40px;
+          .secont-text {
+            font-size: 20px;
+          }
+
+          .third-wrapper {
+            font-size: 40px;
+          }
         }
       }
     }
