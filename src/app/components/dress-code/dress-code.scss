@@ -34,7 +34,39 @@
         }
       }
 
+      .picture {
+        .img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      /* ОБЩЕЕ ДЛЯ РУК */
+      .left-arm,
+      .right-arm {
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        pointer-events: none;
+        width: 45%; // КРИТИЧНО
+
+        .img {
+          width: 100%;
+          display: block;
+        }
+      }
+
+      /* СТАРТ (видно ~20px) */
       .left-arm {
+        left: 0;
+        transform: translateX(calc(-100% + 20px));
+        transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .right-arm {
+        right: 0;
+        transform: translateX(calc(100% - 20px));
+        transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
       }
     }
 
