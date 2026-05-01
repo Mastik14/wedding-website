@@ -6,6 +6,18 @@
     justify-content: center;
     gap: 60px;
 
+    &.active {
+      .main-block-container {
+        .left-arm {
+          transform: translateX(0);
+        }
+
+        .right-arm {
+          transform: translateX(0);
+        }
+      }
+    }
+
     .main-block-container {
       position: relative;
 
@@ -41,14 +53,13 @@
         }
       }
 
-      /* ОБЩЕЕ ДЛЯ РУК */
       .left-arm,
       .right-arm {
         position: absolute;
         bottom: 0;
         z-index: 2;
         pointer-events: none;
-        width: 45%; // КРИТИЧНО
+        width: 45%;
 
         .img {
           width: 100%;
@@ -56,15 +67,16 @@
         }
       }
 
-      /* СТАРТ (видно ~20px) */
       .left-arm {
-        left: 0;
+        left: -60px;
+        bottom: 120px;
         transform: translateX(calc(-100% + 20px));
         transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
       }
 
       .right-arm {
-        right: 0;
+        right: -55px;
+        bottom: 120px;
         transform: translateX(calc(100% - 20px));
         transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
       }

@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { Header } from './components/header/header';
 import { DateInvitation } from "./components/date-invitation/date-invitation";
 import { Venue } from "./components/venue/venue";
@@ -9,7 +9,8 @@ import { DressCode } from "./components/dress-code/dress-code";
   selector: 'app-root',
   imports: [Header, DateInvitation, Venue, TimingOfTheDay, DressCode],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class App {
   protected readonly title = signal('wedding-website');

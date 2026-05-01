@@ -1,15 +1,15 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-dress-code',
-  imports: [],
   templateUrl: './dress-code.html',
   styleUrl: './dress-code.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DressCode {
   @ViewChild('dressBlock') dressBlock!: ElementRef;
 
-  ngAfterViewInit() {
+  public ngAfterViewInit(): void {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

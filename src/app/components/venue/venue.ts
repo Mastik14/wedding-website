@@ -1,10 +1,10 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-venue',
-  imports: [],
   templateUrl: './venue.html',
   styleUrl: './venue.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Venue {
   @ViewChild('venue') venue!: ElementRef;
