@@ -1,0 +1,51 @@
+:host {
+  .dress-code-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+
+    .main-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      .main-text {
+        text-align: center;
+        font-family: 'Great Vibes';
+        font-size: 75px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: #360f0f;
+      }
+
+      .picture {
+        .img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .second-text {
+      color: #360f0f;
+      text-align: center;
+      font-family: 'Libre Baskerville';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    .picture {
+      .img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

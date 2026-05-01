@@ -1,5 +1,12 @@
 :host {
   .timing-wrapper {
+    margin-bottom: 65px;
+    background: linear-gradient(180deg, #FAF6FF 0%, #FBF7FF 15.83%, #FFF 32.22%, #FFF 71.44%, #E7D4FF 100%);
 
+    .picture {
+      .img {
+        width: 100%;
+      }
+    }
   }
 }

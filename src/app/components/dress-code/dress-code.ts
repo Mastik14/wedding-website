@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './dress-code.html',
   styleUrl: './dress-code.scss',
 })
-export class DressCode {
-
-}
+export class DressCode {}
