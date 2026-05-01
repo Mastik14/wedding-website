@@ -15,20 +15,17 @@
   }
 
   .picture.top {
-    transform: translateY(80px);
-    transition: transform 1s ease;
-    position: relative;
-    z-index: 2;
+    transform: translateY(160px) scale(1.02);
+    transition: transform 1.1s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  /* нижняя */
   .picture.bottom {
-    margin-top: -80px;
+    margin-top: -160px;
     position: relative;
     z-index: 1;
   }
 
   .venue-wrapper.active .picture.top {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
