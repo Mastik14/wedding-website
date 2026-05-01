@@ -2,5 +2,33 @@
   .venue-wrapper {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+  }
+
+  .picture {
+    width: 100%;
+  }
+
+  .picture img {
+    width: 100%;
+    display: block;
+  }
+
+  .picture.top {
+    transform: translateY(80px);
+    transition: transform 1s ease;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* нижняя */
+  .picture.bottom {
+    margin-top: -80px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .venue-wrapper.active .picture.top {
+    transform: translateY(0);
   }
 }
