@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angu
   selector: 'app-dress-code',
   templateUrl: './dress-code.html',
   styleUrl: './dress-code.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DressCode {
   @ViewChild('dressBlock') dressBlock!: ElementRef;
