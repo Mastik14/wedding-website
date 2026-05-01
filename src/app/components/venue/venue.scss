@@ -31,7 +31,7 @@
     }
 
     &.bottom {
-      margin-top: -160px;
+      margin-top: -25px;
       position: relative;
       z-index: 1;
     }
@@ -99,7 +99,6 @@
       background: #7d9e54;
 
       .text {
-        color: #fff;
         font-family: 'Inter', sans-serif;
         font-size: 20px;
         font-style: normal;
@@ -116,7 +115,7 @@
     .venue-wrapper {
       height: auto;
       min-height: 420px;
-      padding-top: 80px;
+      padding-top: 105px;
     }
 
     .picture {
@@ -125,7 +124,7 @@
       }
 
       &.bottom {
-        margin-top: calc(-1 * clamp(50px, 10vw, 90px));
+        margin-top: -65px;
       }
     }
 
@@ -144,6 +143,15 @@
 
         .second-text {
           font-size: 14px;
+        }
+      }
+
+      .button {
+        width: 160px;
+        height: 44px;
+
+        .text {
+          font-size: 16px;
         }
       }
     }
