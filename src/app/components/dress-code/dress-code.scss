@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     gap: 60px;
+    overflow: hidden;
 
     &.active {
       .main-block-container {
@@ -87,14 +88,33 @@
       }
     }
 
-    .second-text {
-      color: #360f0f;
-      text-align: center;
-      font-family: 'Libre Baskerville';
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
+    .second-text-wrapper {
+      display: flex;
+      // color: #360f0f;
+      // text-align: center;
+      // font-family: 'Libre Baskerville';
+      // font-size: 20px;
+      // font-style: normal;
+      // font-weight: 500;
+      // line-height: normal;
+
+      .desktop {
+        display: inline;
+      }
+
+      .mobile {
+        display: none;
+      }
+
+      .text {
+        color: #360f0f;
+        text-align: center;
+        font-family: 'Libre Baskerville';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
     }
 
     .picture {
@@ -118,6 +138,18 @@
         .right-arm {
           right: -10px;
           bottom: 10px;
+        }
+
+        .second-text-wrapper {
+          font-size: 16px;
+
+          .desktop {
+            display: none;
+          }
+
+          .mobile {
+            display: inline;
+          }
         }
       }
     }
