@@ -6,28 +6,35 @@
     justify-content: center;
     gap: 60px;
 
-    .main-block {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
+    .main-block-container {
+      position: relative;
 
-      .main-text {
-        text-align: center;
-        font-family: 'Great Vibes';
-        font-size: 75px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        color: #360f0f;
+      .main-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        .main-text {
+          text-align: center;
+          font-family: 'Great Vibes';
+          font-size: 75px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          color: #360f0f;
+        }
+
+        .picture {
+          .img {
+            width: 100%;
+            height: 100%;
+          }
+        }
       }
 
-      .picture {
-        .img {
-          width: 100%;
-          height: 100%;
-        }
+      .left-arm {
       }
     }
 
