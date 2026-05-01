@@ -39,7 +39,7 @@
 
   .text-wrapper {
     position: absolute;
-    top: 50px;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
@@ -114,23 +114,36 @@
 @media (max-width: 768px) {
   :host {
     .venue-wrapper {
-      height: 410px;
+      height: auto;
+      min-height: 420px;
+      padding-top: 80px;
+    }
 
-      .text-wrapper {
-        top: 5px;
+    .picture {
+      &.top {
+        transform: translateY(clamp(50px, 10vw, 90px)) scale(1.02);
+      }
 
-        .main-text {
-          font-size: 36px;
+      &.bottom {
+        margin-top: calc(-1 * clamp(50px, 10vw, 90px));
+      }
+    }
+
+    .text-wrapper {
+      gap: 16px;
+
+      .main-text {
+        font-size: 36px;
+        font-weight: 400;
+      }
+
+      .secondary-text-wrapper {
+        .first-text {
+          font-size: 16px;
         }
 
-        .secondary-text-wrapper {
-          .first-text {
-            font-size: 16px;
-          }
-
-          .second-text {
-            font-size: 14px;
-          }
+        .second-text {
+          font-size: 14px;
         }
       }
     }

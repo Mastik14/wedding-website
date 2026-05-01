@@ -9,7 +9,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 export class Venue {
   @ViewChild('venue') venue!: ElementRef;
 
-  ngAfterViewInit() {
+  public ngAfterViewInit(): void {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -23,4 +23,6 @@ export class Venue {
 
     observer.observe(this.venue.nativeElement);
   }
+
+  public openMap(): void {}
 }
