@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    height: 866px;
 
     &.active {
       .picture {
@@ -45,7 +46,7 @@
     text-align: center;
 
     display: flex;
-    width: 435px;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     gap: 24px;
@@ -105,6 +106,32 @@
         font-weight: 600;
         line-height: normal;
         color: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  :host {
+    .venue-wrapper {
+      height: 410px;
+
+      .text-wrapper {
+        top: 5px;
+
+        .main-text {
+          font-size: 36px;
+        }
+
+        .secondary-text-wrapper {
+          .first-text {
+            font-size: 16px;
+          }
+
+          .second-text {
+            font-size: 14px;
+          }
+        }
       }
     }
   }
