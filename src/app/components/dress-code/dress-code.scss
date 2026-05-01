@@ -6,6 +6,7 @@
     justify-content: center;
     gap: 60px;
     overflow: hidden;
+    margin-bottom: 128px;
 
     &.active {
       .main-block-container {
@@ -118,6 +119,8 @@
 @media (max-width: 768px) {
   :host {
     .dress-code-wrapper {
+      margin-bottom: 85px;
+
       .main-block-container {
         .main-block {
           .main-text {
