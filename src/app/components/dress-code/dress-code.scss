@@ -90,21 +90,10 @@
 
     .second-text-wrapper {
       display: flex;
-      // color: #360f0f;
-      // text-align: center;
-      // font-family: 'Libre Baskerville';
-      // font-size: 20px;
-      // font-style: normal;
-      // font-weight: 500;
-      // line-height: normal;
-
-      .desktop {
-        display: inline;
-      }
-
-      .mobile {
-        display: none;
-      }
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      max-width: 523px;
 
       .text {
         color: #360f0f;
@@ -130,6 +119,12 @@
   :host {
     .dress-code-wrapper {
       .main-block-container {
+        .main-block {
+          .main-text {
+            font-size: 36px;
+          }
+        }
+
         .left-arm {
           left: -10px;
           bottom: 10px;
@@ -139,17 +134,13 @@
           right: -10px;
           bottom: 10px;
         }
+      }
 
-        .second-text-wrapper {
+      .second-text-wrapper {
+        max-width: 300px;
+
+        .text {
           font-size: 16px;
-
-          .desktop {
-            display: none;
-          }
-
-          .mobile {
-            display: inline;
-          }
         }
       }
     }
