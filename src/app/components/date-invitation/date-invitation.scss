@@ -85,7 +85,7 @@
   }
 
   .date-invitation-wrapper.active .img-inner {
-    animation: floatImage 6s ease-in-out 1.2s infinite;
+    animation: floatImage 8s cubic-bezier(0.42, 0, 0.58, 1) 1.2s infinite;
   }
 }
 
@@ -141,14 +141,30 @@
 
 @keyframes floatImage {
   0% {
-    transform: translateY(0);
+    transform: translateY(0) rotate(0deg) scale(1);
   }
 
-  50% {
-    transform: translateY(-6px);
+  20% {
+    transform: translateY(-8px) rotate(0.8deg) scale(1.01);
+  }
+
+  40% {
+    transform: translateY(-2px) rotate(-0.6deg) scale(1.005);
+  }
+
+  60% {
+    transform: translateY(-10px) rotate(1deg) scale(1.015);
+  }
+
+  75% {
+    transform: translateY(3px) rotate(-0.4deg) scale(0.998);
+  }
+
+  90% {
+    transform: translateY(-4px) rotate(0.3deg) scale(1.003);
   }
 
   100% {
-    transform: translateY(0);
+    transform: translateY(0) rotate(0deg) scale(1);
   }
 }
