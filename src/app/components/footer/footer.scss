@@ -33,17 +33,9 @@
       }
     }
 
-    // .picture {
-    //   .img {
-    //     width: 100%;
-    //     height: 100%;
-    //   }
-    // }
-
     .flowers {
       position: absolute;
       top: 0;
-      aspect-ratio: 183.76 / 70.31;
 
       will-change: transform;
 
@@ -53,18 +45,15 @@
       }
 
       &.left {
-        left: -185px;
-        bottom: 50px;
-        transform-origin: right bottom;
-        animation: swing 2.8s ease-in-out infinite;
+        left: -60px;
+        transform-origin: left bottom;
+        animation: floatLeft 3s ease-in-out infinite;
       }
 
       &.right {
-        // display: none;
-        // bottom: 50px;
-        display: none;
-        transform-origin: left bottom;
-        animation: swing 3.2s ease-in-out infinite;
+        right: -60px;
+        transform-origin: right bottom;
+        animation: floatRight 3.2s ease-in-out infinite;
       }
     }
   }
@@ -88,49 +77,47 @@
 
       .flowers {
         &.left {
-          right: -20px;
+          left: 30px;
         }
 
-        .right {
-          left: -20px;
+        &.right {
+          right: 30px;
         }
       }
     }
   }
 }
 
-@keyframes swing {
+@keyframes floatLeft {
   0% {
-    transform: rotate(0deg);
+    transform: translateY(20px) rotate(0deg);
+    opacity: 0.9;
   }
+
   50% {
-    transform: rotate(7deg);
+    transform: translateY(-10px) rotate(4deg);
+    opacity: 1;
   }
+
   100% {
-    transform: rotate(0deg);
+    transform: translateY(20px) rotate(0deg);
+    opacity: 0.9;
   }
 }
 
-// @keyframes swing-left {
-//   0% {
-//     transform: rotate(-175deg);
-//   }
-//   50% {
-//     transform: rotate(-168deg);
-//   }
-//   100% {
-//     transform: rotate(-175deg);
-//   }
-// }
+@keyframes floatRight {
+  0% {
+    transform: translateY(20px) rotate(0deg);
+    opacity: 0.9;
+  }
 
-// @keyframes swing-right {
-//   0% {
-//     transform: rotate(175deg);
-//   }
-//   50% {
-//     transform: rotate(168deg);
-//   }
-//   100% {
-//     transform: rotate(175deg);
-//   }
-// }
+  50% {
+    transform: translateY(-10px) rotate(-4deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(20px) rotate(0deg);
+    opacity: 0.9;
+  }
+}
