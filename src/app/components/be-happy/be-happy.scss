@@ -3,6 +3,12 @@
     position: relative;
     overflow: hidden;
 
+    .picture {
+      .img {
+        width: 100%;
+      }
+    }
+
     .flowers-wrapper {
       display: flex;
       margin-top: -220px;
@@ -123,7 +129,29 @@
       }
 
       .decorations-wrapper {
-        margin-top: -75px;
+        margin-top: -80px;
+      }
+
+      .stage {
+        // height: 784px;
+        // margin-top: -195px;
+        height: 100%;
+        margin-top: -10px;
+        z-index: 4;
+
+        .main-content {
+          width: 295px;
+          max-width: 295px;
+
+          .text-wrapper {
+            width: 238px;
+            max-width: 238px;
+
+            .text {
+              font-size: 24px;
+            }
+          }
+        }
       }
     }
   }
