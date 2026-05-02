@@ -1,9 +1,10 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-be-happy',
   templateUrl: './be-happy.html',
   styleUrl: './be-happy.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BeHappy {
   @ViewChild('happyBlock') happyBlock!: ElementRef;

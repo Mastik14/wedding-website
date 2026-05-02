@@ -2,6 +2,7 @@
   .be-happy-wrapper {
     position: relative;
     overflow: hidden;
+    margin-bottom: 250px;
 
     .picture {
       .img {
@@ -124,6 +125,8 @@
 @media (max-width: 768px) {
   :host {
     .be-happy-wrapper {
+      margin-bottom: 80px;
+
       .flowers-wrapper {
         margin-top: -75px;
       }
