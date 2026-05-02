@@ -3,16 +3,7 @@
     position: relative;
     overflow: hidden;
 
-    .picture {
-      z-index: 2;
-
-      .img {
-        width: 100%;
-      }
-    }
-
     .flowers-wrapper {
-      z-index: 3;
       display: flex;
       margin-top: -175px;
 
@@ -30,29 +21,58 @@
     position: relative;
     height: 1160px;
     overflow: hidden;
-    margin-top: -160px;
+    margin-top: -25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .main-image {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    max-width: 800px;
+    text-align: center;
 
-    opacity: 0;
-    transition: opacity 1s ease 0.6s;
+    .text-wrapper {
+      width: 681px;
+      max-width: 681px;
+
+      .text {
+        text-align: center;
+        font-family: 'Great Vibes';
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: #360f0f;
+      }
+    }
+
+    .main-image {
+      // position: absolute;
+      inset: 0;
+      z-index: 1;
+
+      opacity: 0;
+      transition: opacity 1s ease 0.6s;
+    }
   }
 
   .curtain {
     position: absolute;
     top: 0;
-    bottom: 0;
-    width: 50%;
+    // bottom: 0;
+    // width: 50%;
     z-index: 2;
 
     transition: transform 2.2s cubic-bezier(0.77, 0, 0.175, 1);
 
     &.left {
-      left: 0;
+      left: 25px;
     }
 
     &.right {
@@ -62,7 +82,7 @@
 
   .be-happy-wrapper.active {
     .curtain.left {
-      transform: translateX(-100%);
+      transform: translateX(-50%);
     }
 
     .curtain.right {
