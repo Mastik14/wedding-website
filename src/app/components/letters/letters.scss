@@ -103,7 +103,7 @@
   .letters-wrapper .decor-shake {
     will-change: transform;
     transform-origin: center;
-    animation: decorFloat 6s ease-in-out infinite;
+    animation: decorFloat 5.5s ease-in-out infinite;
   }
 
   .letters-wrapper.active {
@@ -189,15 +189,27 @@
   0% {
     transform: translateY(0) rotate(0deg);
   }
-  25% {
-    transform: translateY(-3px) rotate(0.4deg);
+
+  15% {
+    transform: translateY(-6px) rotate(1.2deg);
   }
+
+  30% {
+    transform: translateY(-2px) rotate(-1deg);
+  }
+
   50% {
-    transform: translateY(0) rotate(-0.3deg);
+    transform: translateY(4px) rotate(1.6deg);
   }
-  75% {
-    transform: translateY(2px) rotate(0.2deg);
+
+  70% {
+    transform: translateY(-3px) rotate(-0.8deg);
   }
+
+  85% {
+    transform: translateY(2px) rotate(0.6deg);
+  }
+
   100% {
     transform: translateY(0) rotate(0deg);
   }
