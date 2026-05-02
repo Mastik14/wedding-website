@@ -41,6 +41,20 @@
             aspect-ratio: 61/57;
           }
         }
+
+        .sun {
+          cursor: pointer;
+
+          will-change: transform;
+
+          &.left {
+            animation: sunScale 3s ease-in-out infinite;
+          }
+
+          &.right {
+            animation: sunScale 3.1s ease-in-out infinite;
+          }
+        }
       }
     }
 
@@ -105,5 +119,17 @@
         }
       }
     }
+  }
+}
+
+@keyframes sunScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
