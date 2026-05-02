@@ -5,7 +5,6 @@
 
     .flowers-wrapper {
       display: flex;
-      // margin-top: -175px;
       margin-top: -220px;
 
       .picture {
@@ -91,14 +90,14 @@
       object-fit: cover;
       display: block;
     }
-  }
 
-  .curtain.left {
-    left: 0;
-  }
+    &.left {
+      left: 0;
+    }
 
-  .curtain.right {
-    right: 0;
+    &.right {
+      right: 0;
+    }
   }
 
   .be-happy-wrapper.active {
@@ -112,6 +111,20 @@
 
     .main-image {
       opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  :host {
+    .be-happy-wrapper {
+      .flowers-wrapper {
+        margin-top: -75px;
+      }
+
+      .decorations-wrapper {
+        margin-top: -75px;
+      }
     }
   }
 }
