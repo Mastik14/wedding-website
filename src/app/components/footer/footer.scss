@@ -40,18 +40,19 @@
       will-change: transform;
 
       .img {
+        width: 30vw;
         display: block;
         object-fit: contain;
       }
 
       &.left {
-        left: -60px;
+        left: 0vw;
         transform-origin: left bottom;
         animation: floatLeft 3s ease-in-out infinite;
       }
 
       &.right {
-        right: -60px;
+        right: 0vw;
         transform-origin: right bottom;
         animation: floatRight 3.2s ease-in-out infinite;
       }
@@ -76,12 +77,16 @@
       }
 
       .flowers {
+        .img {
+          width: 25vw;
+        }
+
         &.left {
-          left: 30px;
+          left: 0vw;
         }
 
         &.right {
-          right: 30px;
+          right: 0vw;
         }
       }
     }
