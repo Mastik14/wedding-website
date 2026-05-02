@@ -1,8 +1,10 @@
 :host {
   .footer-wrapper {
     position: relative;
+    overflow: hidden;
 
     .text-wrapper {
+      margin-bottom: 140px;
       position: relative;
       z-index: 2;
       display: flex;
@@ -10,12 +12,12 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      gap: 13px;
+      gap: 6px;
 
       .first-text {
         color: #360f0f;
         font-family: 'Great Vibes';
-        font-size: 28px;
+        font-size: 75px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -24,7 +26,7 @@
       .second-text {
         color: #360f0f;
         font-family: 'Great Vibes';
-        font-size: 32px;
+        font-size: 75px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -52,11 +54,62 @@
     }
 
     .flowers.left {
-      left: -40px;
+      right: -40px;
     }
 
     .flowers.right {
-      right: -40px;
+      left: -40px;
     }
+
+    .flowers.left {
+      animation: swing-left 2.8s ease-in-out infinite;
+    }
+
+    .flowers.right {
+      animation: swing-right 3.2s ease-in-out infinite;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  :host {
+    .footer-wrapper {
+      .text-wrapper {
+        margin-bottom: 40px;
+        gap: 13px;
+
+        .first-text {
+          font-size: 28px;
+        }
+
+        .second-text {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes swing-left {
+  0% {
+    transform: rotate(-175deg);
+  }
+  50% {
+    transform: rotate(-168deg);
+  }
+  100% {
+    transform: rotate(-175deg);
+  }
+}
+
+@keyframes swing-right {
+  0% {
+    transform: rotate(175deg);
+  }
+  50% {
+    transform: rotate(168deg);
+  }
+  100% {
+    transform: rotate(175deg);
   }
 }
