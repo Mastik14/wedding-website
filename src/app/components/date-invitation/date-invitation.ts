@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-date-invitation',
@@ -6,4 +6,19 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './date-invitation.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DateInvitation {}
+export class DateInvitation {
+  @ViewChild('block') block!: ElementRef;
+
+  ngAfterViewInit() {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          this.block.nativeElement.classList.add('active');
+        }
+      },
+      { threshold: 0.3 },
+    );
+
+    observer.observe(this.block.nativeElement);
+  }
+}

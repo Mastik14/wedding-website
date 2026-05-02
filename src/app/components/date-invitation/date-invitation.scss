@@ -38,16 +38,34 @@
     }
 
     .picture {
-      .img {
+      overflow: hidden;
+
+      .img-inner {
+        will-change: transform;
+
+              .img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center;
 
         display: block;
+
+            opacity: 0;
+    transform: scale(1.08) translateY(40px);
+    filter: blur(8px);
+      }
       }
     }
   }
+
+  .date-invitation-wrapper.active .img {
+  animation: revealImage 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.date-invitation-wrapper.active .img-inner {
+  animation: floatImage 6s ease-in-out 2s infinite;
+}
 }
 
 @media (max-width: 768px) {
@@ -70,5 +88,39 @@
         }
       }
     }
+  }
+}
+
+@keyframes revealImage {
+  0% {
+    opacity: 0;
+    transform: scale(1.08) translateY(40px);
+    filter: blur(8px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.02) translateY(-6px);
+    filter: blur(2px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
