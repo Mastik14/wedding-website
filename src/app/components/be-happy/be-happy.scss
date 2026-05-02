@@ -4,12 +4,15 @@
     overflow: hidden;
 
     .picture {
+      z-index: 2;
+
       .img {
         width: 100%;
       }
     }
 
     .flowers-wrapper {
+      z-index: 3;
       display: flex;
       margin-top: -175px;
 
@@ -23,9 +26,11 @@
   }
 
   .stage {
+    z-index: 1;
     position: relative;
     height: 1160px;
     overflow: hidden;
+    margin-top: -160px;
   }
 
   .main-image {
