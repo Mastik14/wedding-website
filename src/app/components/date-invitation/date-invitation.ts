@@ -9,7 +9,7 @@ import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angu
 export class DateInvitation {
   @ViewChild('block') block!: ElementRef;
 
-  ngAfterViewInit() {
+  public ngAfterViewInit(): void {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

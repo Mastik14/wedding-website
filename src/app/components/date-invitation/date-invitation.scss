@@ -41,31 +41,52 @@
       overflow: hidden;
 
       .img-inner {
-        will-change: transform;
+        position: relative;
+        overflow: hidden;
 
-              .img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
+        .img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
 
-        display: block;
+          display: block;
 
-            opacity: 0;
-    transform: scale(1.08) translateY(40px);
-    filter: blur(8px);
-      }
+          opacity: 0;
+          transform: scale(1.04) translateY(20px);
+        }
+
+        .light-sweep {
+          position: absolute;
+          inset: 0;
+
+          background: linear-gradient(
+            120deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.08) 40%,
+            rgba(255, 255, 255, 0.25) 50%,
+            rgba(255, 255, 255, 0.08) 60%,
+            transparent 100%
+          );
+
+          transform: translateX(-120%);
+          pointer-events: none;
+        }
       }
     }
   }
 
   .date-invitation-wrapper.active .img {
-  animation: revealImage 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
+    animation: cleanReveal 1.2s ease-out forwards;
+  }
 
-.date-invitation-wrapper.active .img-inner {
-  animation: floatImage 6s ease-in-out 2s infinite;
-}
+  .date-invitation-wrapper.active .light-sweep {
+    animation: lightSweep 1s ease-out;
+  }
+
+  .date-invitation-wrapper.active .img-inner {
+    animation: floatImage 6s ease-in-out 1.2s infinite;
+  }
 }
 
 @media (max-width: 768px) {
@@ -91,23 +112,30 @@
   }
 }
 
-@keyframes revealImage {
+@keyframes cleanReveal {
   0% {
     opacity: 0;
-    transform: scale(1.08) translateY(40px);
-    filter: blur(8px);
+    transform: scale(1.04) translateY(20px);
   }
 
   60% {
     opacity: 1;
-    transform: scale(1.02) translateY(-6px);
-    filter: blur(2px);
+    transform: scale(1.01) translateY(-2px);
   }
 
   100% {
     opacity: 1;
     transform: scale(1) translateY(0);
-    filter: blur(0);
+  }
+}
+
+@keyframes lightSweep {
+  0% {
+    transform: translateX(-120%);
+  }
+
+  100% {
+    transform: translateX(120%);
   }
 }
 
@@ -117,7 +145,7 @@
   }
 
   50% {
-    transform: translateY(-12px);
+    transform: translateY(-6px);
   }
 
   100% {
