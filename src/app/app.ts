@@ -6,10 +6,11 @@ import { TimingOfTheDay } from "./components/timing-of-the-day/timing-of-the-day
 import { DressCode } from "./components/dress-code/dress-code";
 import { BeHappy } from "./components/be-happy/be-happy";
 import { Letters } from "./components/letters/letters";
+import { Footer } from "./components/footer/footer";
 
 @Component({
   selector: 'app-root',
-  imports: [Header, DateInvitation, Venue, TimingOfTheDay, DressCode, BeHappy, Letters],
+  imports: [Header, DateInvitation, Venue, TimingOfTheDay, DressCode, BeHappy, Letters, Footer],
   templateUrl: './app.html',
   styleUrl: './app.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
