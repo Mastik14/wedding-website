@@ -5,6 +5,19 @@
 
     .flowers-wrapper {
       display: flex;
+      // margin-top: -175px;
+      margin-top: -220px;
+
+      .picture {
+        .img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .decorations-wrapper {
+      display: flex;
       margin-top: -175px;
 
       .picture {
@@ -17,11 +30,11 @@
   }
 
   .stage {
-    z-index: 1;
+    z-index: -1;
     position: relative;
     height: 1160px;
     overflow: hidden;
-    margin-top: -25px;
+    margin-top: -75px;
 
     display: flex;
     align-items: center;
@@ -53,7 +66,6 @@
     }
 
     .main-image {
-      // position: absolute;
       inset: 0;
       z-index: 1;
 
@@ -66,7 +78,7 @@
     position: absolute;
     top: 0;
     height: 100%;
-    width: 50%; // КЛЮЧЕВОЕ
+    width: 50%;
     z-index: 2;
 
     overflow: hidden;
@@ -89,17 +101,17 @@
     right: 0;
   }
 
-.be-happy-wrapper.active {
-  .curtain.left {
-    transform: translateX(calc(-100% + 20vw));
-  }
+  .be-happy-wrapper.active {
+    .curtain.left {
+      transform: translateX(calc(-100% + 20vw));
+    }
 
-  .curtain.right {
-    transform: translateX(calc(100% - 20vw));
-  }
+    .curtain.right {
+      transform: translateX(calc(100% - 20vw));
+    }
 
-  .main-image {
-    opacity: 1;
+    .main-image {
+      opacity: 1;
+    }
   }
-}
 }
