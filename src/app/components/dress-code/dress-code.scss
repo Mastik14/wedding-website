@@ -135,18 +135,19 @@
       animation: shineSoft 3.2s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    @keyframes shineSoft {
-      0% {
-        transform: translateX(0);
-        opacity: 0;
-      }
-      25% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateX(400%);
-        opacity: 0;
-      }
+    .people-reveal {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .people-reveal img {
+      width: 100%;
+      display: block;
+
+      clip-path: inset(100% 0 0 0); // полностью скрыта снизу
+      transform: translateY(40px) scale(1.02);
+
+      will-change: clip-path, transform;
     }
 
     .picture {
@@ -159,6 +160,10 @@
 
   .dress-code-wrapper.active .palitres-reveal img {
     animation: revealSoft 3.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .dress-code-wrapper.active .people-reveal img {
+    animation: revealUpPremium 2.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 }
 
@@ -218,5 +223,41 @@
     clip-path: inset(0 0% 0 0);
     transform: scale(1);
     filter: blur(0);
+  }
+}
+
+@keyframes shineSoft {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(400%);
+    opacity: 0;
+  }
+}
+
+@keyframes revealUpPremium {
+  0% {
+    clip-path: inset(100% 0 0 0);
+    transform: translateY(40px) scale(1.02);
+  }
+
+  40% {
+    clip-path: inset(50% 0 0 0);
+    transform: translateY(10px) scale(1.01);
+  }
+
+  70% {
+    clip-path: inset(10% 0 0 0);
+    transform: translateY(-4px) scale(1);
+  }
+
+  100% {
+    clip-path: inset(0% 0 0 0);
+    transform: translateY(0) scale(1);
   }
 }
