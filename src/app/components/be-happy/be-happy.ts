@@ -8,14 +8,17 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 export class BeHappy {
   @ViewChild('happyBlock') happyBlock!: ElementRef;
 
-  ngAfterViewInit() {
+  public ngAfterViewInit(): void {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           this.happyBlock.nativeElement.classList.add('active');
+          observer.disconnect();
         }
       },
-      { threshold: 0.4 },
+      {
+        threshold: 0.3,
+      },
     );
 
     observer.observe(this.happyBlock.nativeElement);
