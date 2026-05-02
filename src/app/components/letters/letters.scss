@@ -104,6 +104,7 @@
     will-change: transform;
     transform-origin: center;
     animation: decorFloat 5.5s ease-in-out infinite;
+    margin-bottom: 100px;
   }
 
   .letters-wrapper.active {
@@ -145,6 +146,10 @@
           }
         }
       }
+    }
+
+    .letters-wrapper .decor-shake {
+      margin-bottom: 50px;
     }
   }
 }
