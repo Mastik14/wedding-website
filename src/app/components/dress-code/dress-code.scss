@@ -171,6 +171,12 @@
     animation: paletteLight 2.8s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
+.dress-code-wrapper.active .palitres-reveal img {
+  animation:
+    paletteReveal 2.8s ease forwards,
+    palitresFloat 7s ease-in-out 2.8s infinite;
+}
+
   .dress-code-wrapper.active .people-reveal img {
     animation: peopleStage 2.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
@@ -260,5 +266,27 @@
   100% {
     transform: translateY(0) scale(1);
     filter: blur(0);
+  }
+}
+
+@keyframes palitresFloat {
+  0% {
+    transform: scale(1) rotate(0deg) translate(0, 0) rotateX(0deg);
+  }
+
+  25% {
+    transform: scale(1.02) rotate(0.6deg) translate(-6px, -8px) rotateX(1deg);
+  }
+
+  50% {
+    transform: scale(1.015) rotate(-0.4deg) translate(4px, 4px) rotateX(-1deg);
+  }
+
+  75% {
+    transform: scale(1.02) rotate(0.5deg) translate(-3px, -6px) rotateX(0.5deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg) translate(0, 0) rotateX(0deg);
   }
 }
