@@ -12,6 +12,8 @@
 
     .flowers-wrapper {
       display: flex;
+      position: absolute;
+      top: 35%;
       // margin-top: clamp(-120px, -10vw, -220px);
 
       .picture {
@@ -24,6 +26,8 @@
 
     .decorations-wrapper {
       display: flex;
+      position: absolute;
+      top: 43%;
       // margin-top: clamp(-100px, -8vw, -175px);
 
       .picture {
@@ -128,6 +132,14 @@
   :host {
     .be-happy-wrapper {
       margin-bottom: 80px;
+
+      .flowers-wrapper {
+        top: 40%;
+      }
+
+      .decorations-wrapper {
+        top: 47%;
+      }
     }
   }
 }
