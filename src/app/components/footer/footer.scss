@@ -1,5 +1,32 @@
 :host {
   .footer-wrapper {
+    position: relative;
 
+    .text-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 13px;
+
+      .first-text {
+        color: #360f0f;
+        font-family: 'Great Vibes';
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .second-text {
+        color: #360f0f;
+        font-family: 'Great Vibes';
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
   }
 }

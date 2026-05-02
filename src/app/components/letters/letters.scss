@@ -1,5 +1,7 @@
 :host {
   .letters-wrapper {
+    margin-bottom: 200px;
+
     .picture {
       .img {
         width: 100%;
@@ -73,6 +75,8 @@
 @media (max-width: 768px) {
   :host {
     .letters-wrapper {
+      margin-bottom: 80px;
+
       .letters-container {
         .text-container {
           .text {
