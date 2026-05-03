@@ -14,12 +14,13 @@ export class Venue {
       ([entry]) => {
         if (entry.isIntersecting) {
           this.venueImage.nativeElement.classList.add('active');
-          observer.disconnect(); // чтобы не дёргалось повторно
+          observer.disconnect();
         }
       },
       {
-        threshold: 0.6, // важно! появляется когда блок уже хорошо виден
-      }
+        threshold: 0.1,
+        rootMargin: '0px 0px -20% 0px',
+      },
     );
 
     observer.observe(this.venueImage.nativeElement);
