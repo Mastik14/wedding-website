@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  HostListener,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-venue',
@@ -9,7 +15,7 @@ import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angu
 export class Venue {
   @ViewChild('venueImage', { static: true }) venueImage!: ElementRef;
 
-  ngAfterViewInit() {
+  public ngAfterViewInit(): void {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -18,8 +24,8 @@ export class Venue {
         }
       },
       {
-        threshold: 0.1,
-        rootMargin: '0px 0px -20% 0px',
+        threshold: 0.2,
+        rootMargin: '0px 0px -10% 0px',
       },
     );
 
