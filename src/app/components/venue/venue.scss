@@ -22,6 +22,31 @@
     }
   }
 
+  .picture.top {
+    overflow: hidden;
+
+    .img {
+      transform: translateY(120px) scale(1.12);
+      opacity: 0;
+      filter: blur(10px);
+
+      transition:
+        transform 2s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 1.6s ease,
+        filter 1.6s ease;
+    }
+
+    &.active .img {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+      filter: blur(0);
+    }
+
+    .img {
+      transition-delay: 0.2s;
+    }
+  }
+
   .text-wrapper {
     position: absolute;
     top: 0;

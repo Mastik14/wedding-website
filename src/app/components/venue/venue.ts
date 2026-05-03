@@ -7,21 +7,22 @@ import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angu
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Venue {
-  @ViewChild('venue') venue!: ElementRef;
+  @ViewChild('venueImage', { static: true }) venueImage!: ElementRef;
 
-  public ngAfterViewInit(): void {
+  ngAfterViewInit() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          this.venue.nativeElement.classList.add('active');
+          this.venueImage.nativeElement.classList.add('active');
+          observer.disconnect(); // чтобы не дёргалось повторно
         }
       },
       {
-        threshold: 0.4,
-      },
+        threshold: 0.6, // важно! появляется когда блок уже хорошо виден
+      }
     );
 
-    observer.observe(this.venue.nativeElement);
+    observer.observe(this.venueImage.nativeElement);
   }
 
   public openMap(): void {
