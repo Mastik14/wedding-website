@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  HostListener,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-date-invitation',
@@ -7,6 +13,13 @@ import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angu
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DateInvitation {
+  @HostListener('window:load')
+  public onLoad(): void {
+    setTimeout(() => {
+      this.block.nativeElement.classList.add('active');
+    }, 200);
+  }
+
   @ViewChild('block') block!: ElementRef;
 
   public ngAfterViewInit(): void {
