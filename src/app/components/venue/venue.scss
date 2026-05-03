@@ -189,12 +189,33 @@
     }
 
     .picture.top {
-      width: 100%;
+      overflow: hidden;
+
+      .img {
+        width: 100%;
+        display: block;
+
+        transform: translateY(160px) scale(1.12);
+        opacity: 0;
+        filter: blur(12px);
+
+        transition:
+          transform 1.8s cubic-bezier(0.22, 1, 0.36, 1),
+          opacity 1.4s ease,
+          filter 1.4s ease;
+
+        will-change: transform, opacity, filter;
+      }
+
+      &.active .img {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        filter: blur(0);
+      }
     }
 
-    .picture.top .img {
-      width: 100%;
-      max-width: 100%;
+    .picture.top {
+      transform: translateZ(0);
     }
 
     .text-wrapper {

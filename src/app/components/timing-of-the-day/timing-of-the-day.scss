@@ -37,3 +37,15 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  :host {
+    .timing-wrapper {
+      .text-wrapper {
+        .text {
+          font-size: 36px;
+        }
+      }
+    }
+  }
+}
