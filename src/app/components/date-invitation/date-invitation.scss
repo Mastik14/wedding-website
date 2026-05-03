@@ -109,6 +109,10 @@
         }
       }
     }
+
+    .date-invitation-wrapper.active .img-inner {
+      animation: floatImage 6.5s ease-in-out 1.2s infinite;
+    }
   }
 }
 
@@ -141,30 +145,34 @@
 
 @keyframes floatImage {
   0% {
-    transform: translateY(0) rotate(0deg) scale(1);
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
   }
 
-  20% {
-    transform: translateY(-8px) rotate(0.8deg) scale(1.01);
+  15% {
+    transform: translate3d(-6px, -10px, 0) rotate(-1.2deg) scale(1.02);
   }
 
-  40% {
-    transform: translateY(-2px) rotate(-0.6deg) scale(1.005);
+  30% {
+    transform: translate3d(5px, -4px, 0) rotate(0.8deg) scale(1.01);
+  }
+
+  45% {
+    transform: translate3d(-8px, -14px, 0) rotate(-1.6deg) scale(1.03);
   }
 
   60% {
-    transform: translateY(-10px) rotate(1deg) scale(1.015);
+    transform: translate3d(6px, 2px, 0) rotate(0.9deg) scale(1.005);
   }
 
   75% {
-    transform: translateY(3px) rotate(-0.4deg) scale(0.998);
+    transform: translate3d(-4px, -6px, 0) rotate(-0.6deg) scale(1.015);
   }
 
   90% {
-    transform: translateY(-4px) rotate(0.3deg) scale(1.003);
+    transform: translate3d(3px, -2px, 0) rotate(0.4deg) scale(1.01);
   }
 
   100% {
-    transform: translateY(0) rotate(0deg) scale(1);
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
   }
 }
