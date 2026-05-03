@@ -149,10 +149,8 @@
 
       transform-origin: center bottom;
 
-      transform: translateY(120px) scale(0.95);
-      filter: blur(8px);
-
-      will-change: transform, filter;
+      transform: translateY(140px) scale(0.94) rotate(2deg);
+      will-change: transform;
     }
 
     .picture {
@@ -171,14 +169,16 @@
     animation: paletteLight 2.8s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-.dress-code-wrapper.active .palitres-reveal img {
-  animation:
-    paletteReveal 2.8s ease forwards,
-    palitresFloat 7s ease-in-out 2.8s infinite;
-}
+  .dress-code-wrapper.active .palitres-reveal img {
+    animation:
+      paletteReveal 2.8s ease forwards,
+      palitresFloat 7s ease-in-out 2.8s infinite;
+  }
 
   .dress-code-wrapper.active .people-reveal img {
-    animation: peopleStage 2.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation:
+      peopleRevealPremium 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+      peopleFloat 6s ease-in-out 1.8s infinite;
   }
 }
 
@@ -266,6 +266,46 @@
   100% {
     transform: translateY(0) scale(1);
     filter: blur(0);
+  }
+}
+
+@keyframes peopleRevealPremium {
+  0% {
+    transform: translateY(140px) scale(0.94) rotate(2deg);
+  }
+
+  50% {
+    transform: translateY(-12px) scale(1.02) rotate(-1deg);
+  }
+
+  75% {
+    transform: translateY(6px) scale(0.995) rotate(0.5deg);
+  }
+
+  100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes peopleFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-6px) rotate(0.6deg);
+  }
+
+  50% {
+    transform: translateY(3px) rotate(-0.5deg);
+  }
+
+  75% {
+    transform: translateY(-4px) rotate(0.4deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
   }
 }
 
