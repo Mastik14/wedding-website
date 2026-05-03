@@ -15,25 +15,42 @@ import {
 export class Venue {
   @ViewChild('venueImage', { static: true }) venueImage!: ElementRef;
 
-  private observer!: IntersectionObserver;
+  private hasUserScrolled = false;
   private hasAnimated = false;
 
-  ngAfterViewInit(): void {
-    this.observer = new IntersectionObserver(
+  public ngAfterViewInit(): void {
+    const el = this.venueImage.nativeElement;
+
+    const observer = new IntersectionObserver(
       ([entry]) => {
+        if (!this.hasUserScrolled) return;
+
         if (entry.isIntersecting && !this.hasAnimated) {
-          this.venueImage.nativeElement.classList.add('active');
-          this.hasAnimated = true;
-          this.observer.disconnect();
+          this.triggerAnimation();
+          observer.disconnect();
         }
       },
       {
-        threshold: 0.25, // 🔥 универсально для моб/пк
+        threshold: 0.25,
         rootMargin: '0px 0px -10% 0px',
       },
     );
 
-    this.observer.observe(this.venueImage.nativeElement);
+    observer.observe(el);
+  }
+
+  @HostListener('window:scroll')
+  public onScroll(): void {
+    this.hasUserScrolled = true;
+  }
+
+  private triggerAnimation() {
+    const el = this.venueImage.nativeElement;
+
+    if (this.hasAnimated) return;
+
+    el.classList.add('active');
+    this.hasAnimated = true;
   }
 
   public openMap(): void {
