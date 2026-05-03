@@ -144,13 +144,9 @@
     }
 
     .people-reveal img {
-      width: 100%;
-      display: block;
-
-      transform-origin: center bottom;
-
-      transform: translateY(140px) scale(0.94) rotate(2deg);
-      will-change: transform;
+      animation:
+        peopleRevealPremium 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+        peopleLiveMotion 7s ease-in-out 1.8s infinite;
     }
 
     .picture {
@@ -178,7 +174,7 @@
   .dress-code-wrapper.active .people-reveal img {
     animation:
       peopleRevealPremium 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards,
-      peopleFloat 6s ease-in-out 1.8s infinite;
+      peopleLiveMotion 6s ease-in-out 1.8s infinite;
   }
 }
 
@@ -328,5 +324,81 @@
 
   100% {
     transform: scale(1) rotate(0deg) translate(0, 0) rotateX(0deg);
+  }
+}
+
+@keyframes peopleMicroShake {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  10% {
+    transform: translateY(-1px) rotate(0.2deg);
+  }
+
+  20% {
+    transform: translateY(1px) rotate(-0.15deg);
+  }
+
+  30% {
+    transform: translateY(-2px) rotate(0.25deg);
+  }
+
+  40% {
+    transform: translateY(1px) rotate(-0.2deg);
+  }
+
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  60% {
+    transform: translateY(-1px) rotate(0.15deg);
+  }
+
+  70% {
+    transform: translateY(2px) rotate(-0.2deg);
+  }
+
+  80% {
+    transform: translateY(-1px) rotate(0.1deg);
+  }
+
+  90% {
+    transform: translateY(1px) rotate(-0.1deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes peopleLiveMotion {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+
+  20% {
+    transform: translateY(-6px) rotate(0.5deg) scale(1.01);
+  }
+
+  35% {
+    transform: translateY(2px) rotate(-0.4deg) scale(0.995);
+  }
+
+  50% {
+    transform: translateY(-3px) rotate(0.3deg) scale(1.005);
+  }
+
+  65% {
+    transform: translateY(4px) rotate(-0.3deg) scale(0.998);
+  }
+
+  80% {
+    transform: translateY(-2px) rotate(0.2deg) scale(1.002);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
   }
 }
