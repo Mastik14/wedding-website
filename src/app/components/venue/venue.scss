@@ -5,25 +5,6 @@
     flex-direction: column;
     overflow: hidden;
     height: 866px;
-
-    &.active {
-      .picture {
-        &.top {
-          transform: translateY(0) scale(1);
-        }
-      }
-    }
-  }
-
-  .venue-wrapper.active .top-inner {
-    animation:
-      venueRevealClean 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards,
-      venueFloatClean 6s ease-in-out 1.4s infinite;
-  }
-
-  .top-inner {
-    transform: translateY(100px) scale(1.05);
-    opacity: 0;
   }
 
   .picture {
@@ -173,16 +154,6 @@
       padding-top: 105px;
     }
 
-    .picture {
-      &.bottom {
-        margin-top: -75px;
-      }
-    }
-
-    .picture.top {
-      transform: translateY(80px) scale(1.06);
-    }
-
     .text-wrapper {
       gap: 16px;
 
@@ -210,36 +181,5 @@
         }
       }
     }
-  }
-}
-
-@keyframes venueRevealClean {
-  0% {
-    opacity: 0;
-    transform: translateY(100px) scale(1.05);
-  }
-
-  60% {
-    opacity: 1;
-    transform: translateY(-8px) scale(1.02);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes venueFloatClean {
-  0% {
-    transform: translateY(0) rotate(0deg) scale(1);
-  }
-
-  50% {
-    transform: translateY(-12px) rotate(0.5deg) scale(1.01);
-  }
-
-  100% {
-    transform: translateY(0) rotate(0deg) scale(1);
   }
 }
