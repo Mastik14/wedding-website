@@ -3,17 +3,6 @@
     margin-bottom: 65px;
 
     .picture {
-      &.bg {
-        background: linear-gradient(
-          180deg,
-          #faf6ff 0%,
-          #fbf7ff 15.83%,
-          #fff 32.22%,
-          #fff 71.44%,
-          #e7d4ff 100%
-        );
-      }
-
       .img {
         width: 100%;
       }
@@ -33,47 +22,36 @@
     }
 
     .main-block-container {
-      .main-content {
-        .leaves-wrapper {
-          position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 30px;
 
-          .content-wrapper {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            position: absolute;
+      .content-wrapper {
+        width: 100%;
 
-            .text {
-              color: #360f0f;
-              font-family: 'Great Vibes';
-              font-size: 36px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: normal;
-            }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        .picture {
+          .img {
+            min-width: 60vw;
           }
+        }
 
-          .first {
-            top: 0;
-            // left: 144px;
-            left: 5vw;
-          }
-
-          .second {
-            // top: 488px;
-            top: 20vh;
-            right: 80px;
-          }
-
-          .third {
-            top: 0;
-            left: 144px;
-          }
-
-          .fourth {
-            top: 400px;
-            right: 80px;
-          }
+        .text {
+          color: #360f0f;
+          font-family: 'Great Vibes';
+          font-size: 36px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
         }
       }
     }
@@ -86,6 +64,23 @@
       .text-wrapper {
         .text {
           font-size: 36px;
+        }
+      }
+
+      .main-block-container {
+        gap: 2px;
+
+        .content-wrapper {
+          .picture {
+            .img {
+              min-width: 310px;
+              max-width: 310px;
+            }
+          }
+
+          .text {
+            font-size: 28px;
+          }
         }
       }
     }
