@@ -55,6 +55,53 @@
         }
       }
     }
+
+    .sky-picture {
+      display: block;
+      overflow: hidden;
+      position: relative;
+
+      .sky-img {
+        width: 100%;
+        display: block;
+
+        opacity: 0;
+
+        transform: translateY(140px) scale(1.18);
+
+        filter: blur(18px) brightness(1.15);
+
+        transition:
+          opacity 1.8s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 2.4s cubic-bezier(0.22, 1, 0.36, 1),
+          filter 2.2s cubic-bezier(0.22, 1, 0.36, 1);
+
+        will-change: transform, opacity, filter;
+      }
+
+      &.visible {
+        .sky-img {
+          opacity: 1;
+
+          filter: blur(0) brightness(1);
+
+          transform: translateY(0) scale(1);
+
+          animation: cloudsFloat 8s ease-in-out infinite alternate;
+          animation-delay: 2.2s;
+        }
+      }
+    }
+
+    @keyframes cloudsFloat {
+      0% {
+        transform: translateY(0) scale(1);
+      }
+
+      100% {
+        transform: translateY(-14px) scale(1.03);
+      }
+    }
   }
 }
 
