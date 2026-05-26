@@ -1,0 +1,84 @@
+:host {
+  .wishes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 110px;
+
+    .img-wrapper {
+      .picture {
+        .img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .content-wrapper {
+      max-width: 608px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+
+      text-align: center;
+
+      .text {
+        color: #360f0f;
+        font-family: 'Great Vibes';
+        font-size: 75px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .glass-wrapper {
+        .picture {
+          .img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .text-wrapper {
+        .text {
+          color: #360f0f;
+          text-align: center;
+          font-family: 'Libre Baskerville';
+          font-size: 20px;
+          font-style: italic;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  :host {
+    .wishes-container {
+      gap: 35px;
+
+      .content-wrapper {
+        max-width: 370px;
+        gap: 35px;
+
+        .text {
+          font-size: 36px;
+        }
+
+        .text-wrapper {
+          .text {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,20 +1,29 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Header } from './components/header/header';
-import { DateInvitation } from "./components/date-invitation/date-invitation";
-import { Venue } from "./components/venue/venue";
-import { TimingOfTheDay } from "./components/timing-of-the-day/timing-of-the-day";
-import { DressCode } from "./components/dress-code/dress-code";
-import { BeHappy } from "./components/be-happy/be-happy";
-import { Letters } from "./components/letters/letters";
-import { Footer } from "./components/footer/footer";
+import { DateInvitation } from './components/date-invitation/date-invitation';
+import { Venue } from './components/venue/venue';
+import { TimingOfTheDay } from './components/timing-of-the-day/timing-of-the-day';
+import { DressCode } from './components/dress-code/dress-code';
+import { BeHappy } from './components/be-happy/be-happy';
+import { Letters } from './components/letters/letters';
+import { Footer } from './components/footer/footer';
+import { Wishes } from './components/wishes/wishes';
 
 @Component({
   selector: 'app-root',
-  imports: [Header, DateInvitation, Venue, TimingOfTheDay, DressCode, BeHappy, Letters, Footer],
+  imports: [
+    Header,
+    DateInvitation,
+    Venue,
+    TimingOfTheDay,
+    DressCode,
+    BeHappy,
+    Letters,
+    Footer,
+    Wishes,
+  ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class App {
-  protected readonly title = signal('wedding-website');
-}
+export class App {}
