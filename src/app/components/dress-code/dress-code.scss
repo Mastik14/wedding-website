@@ -138,17 +138,6 @@
       pointer-events: none;
     }
 
-    .people-reveal {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .people-reveal img {
-      animation:
-        peopleRevealPremium 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards,
-        peopleLiveMotion 7s ease-in-out 1.8s infinite;
-    }
-
     .picture {
       .img {
         width: 100%;
@@ -169,12 +158,6 @@
     animation:
       paletteReveal 2.8s ease forwards,
       palitresFloat 7s ease-in-out 2.8s infinite;
-  }
-
-  .dress-code-wrapper.active .people-reveal img {
-    animation:
-      peopleRevealPremium 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards,
-      peopleLiveMotion 6s ease-in-out 1.8s infinite;
   }
 }
 
