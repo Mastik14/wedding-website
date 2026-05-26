@@ -11,69 +11,64 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
-
       display: block;
     }
 
     .content {
       position: absolute;
       inset: 0;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       text-align: center;
 
-      .text-wrapper {
+      .text-container {
         width: 300px;
         height: 206px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-        .text {
-          font-family: 'Great Vibes';
-          font-weight: 400;
-          line-height: 100%;
-          letter-spacing: 0%;
-          color: #ffffff;
-          opacity: 0;
-          will-change: transform, opacity;
-        }
-
-        .first-text {
+        .first {
           align-self: flex-start;
-          font-size: 75px;
         }
 
-        .secont-text {
+        .second {
           align-self: center;
-          font-size: 40px;
         }
 
-        .third-text {
+        .third {
           align-self: flex-end;
-          font-size: 75px;
+        }
+
+        .text-wrapper {
+          .text {
+            font-family: 'Great Vibes';
+            font-weight: 400;
+            line-height: 100%;
+            color: #ffffff;
+            opacity: 1;
+            transform: none;
+            filter: none;
+          }
+
+          .first-text {
+            align-self: flex-start;
+            font-size: 75px;
+          }
+
+          .secont-text {
+            align-self: center;
+            font-size: 40px;
+          }
+
+          .third-text {
+            align-self: flex-end;
+            font-size: 75px;
+          }
         }
       }
-    }
-  }
-
-  .header.active {
-    .first-text {
-      animation: textInLeft 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-
-    .secont-text {
-      animation: textInCenter 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
-    }
-
-    .third-text {
-      animation: textInRight 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
-    }
-
-    .text-wrapper {
-      animation: textFloat 6s ease-in-out 1.5s infinite;
     }
   }
 }
@@ -84,92 +79,26 @@
       margin-bottom: 30px;
 
       .content {
-        .text-wrapper {
-          width: 206px;
-          gap: 10px;
+        .text-container {
+          max-width: 354px;
 
           .text-wrapper {
-            font-size: 40px;
-          }
+            width: 250px;
 
-          .secont-text {
-            font-size: 20px;
-          }
+            .first-text {
+              font-size: 40px;
+            }
 
-          .third-wrapper {
-            font-size: 40px;
+            .secont-text {
+              font-size: 20px;
+            }
+
+            .third-text {
+              font-size: 40px;
+            }
           }
         }
       }
     }
-  }
-}
-
-@keyframes textFloat {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-4px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes textInLeft {
-  0% {
-    opacity: 0;
-    transform: translate(-80px, -80px) rotate(-8deg) scale(0.9);
-    filter: blur(6px);
-  }
-
-  60% {
-    opacity: 1;
-    transform: translate(6px, 6px) rotate(2deg) scale(1.02);
-    filter: blur(1px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0, 0) rotate(0) scale(1);
-    filter: blur(0);
-  }
-}
-
-@keyframes textInCenter {
-  0% {
-    opacity: 0;
-    transform: translateY(-40px) scale(0.8);
-  }
-
-  60% {
-    opacity: 1;
-    transform: translateY(4px) scale(1.05);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes textInRight {
-  0% {
-    opacity: 0;
-    transform: translate(80px, -80px) rotate(8deg) scale(0.9);
-    filter: blur(6px);
-  }
-
-  60% {
-    opacity: 1;
-    transform: translate(-6px, 6px) rotate(-2deg) scale(1.02);
-    filter: blur(1px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0, 0) rotate(0) scale(1);
-    filter: blur(0);
   }
 }
