@@ -82,3 +82,36 @@
     }
   }
 }
+
+.animate {
+  opacity: 0;
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s ease;
+  will-change: transform, opacity;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: none;
+}
+
+.top-animation {
+  transform: translateY(80px) scale(0.9);
+}
+
+.rotate-animation {
+  transform: perspective(1200px) rotate(-8deg) rotateY(14deg) scale(0.82) translateY(100px);
+
+  transition:
+    opacity 1.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade-up {
+  transform: translateY(40px);
+}
+
+.delay {
+  transition-delay: 0.35s;
+}

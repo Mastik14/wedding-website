@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  inject,
+} from '@angular/core';
 
 @Component({
   selector: 'app-wishes',
@@ -7,6 +13,25 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Wishes {
+export class Wishes implements AfterViewInit {
+  private host = inject(ElementRef);
 
+  public ngAfterViewInit(): void {
+    const elements = this.host.nativeElement.querySelectorAll('.animate');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      },
+    );
+
+    elements.forEach((el: Element) => observer.observe(el));
+  }
 }
